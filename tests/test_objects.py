@@ -21,10 +21,14 @@ def test_create_entity():
         payload = EntityGenerator.random()
         new_object_endpoint = CreateObject()
         new_object_endpoint.create_entity(payload)
+        temp_entity_id = new_object_endpoint.response_txt
 
     with allure.step("Проверка статуса ответа сервиса"):
         new_object_endpoint.check_status_code(200)
         new_object_endpoint.check_type_response()
+
+    delete_obj_endpoint = DeleteObject()
+    delete_obj_endpoint.delete_entity_by_id(temp_entity_id)
 
 
 @allure.feature('ServiceTest')
