@@ -2,7 +2,7 @@
 
 1. Склонировать репозиторий
 ```
-git clone https://github.com/GHMan2021/service_test_api.git"http://localhost:8080/api"
+git clone https://github.com/GHMan2021/service_test_api.git
 ```
 2. Перейти в директорию проекта
 3. Создать вируальное окружение
